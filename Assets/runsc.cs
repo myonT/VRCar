@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour
+public class runsc : MonoBehaviour
 {
 
+    public float speed = 1000;
+
+
     // Use this for initialization
-    private void Start()
+    void Start()
     {
-        GetComponent<WheelCollider>().motorTorque = 100 * 0.05f;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.position += Vector3.forward * Time.deltaTime;
 
     }
 }
